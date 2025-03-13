@@ -58,7 +58,7 @@ export const init = async () => {
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
   scene.add(ambientLight);
 
-  const pointLight = new THREE.PointLight(0, 1);
+  const pointLight = new THREE.PointLight(0, 10);
   camera.add(pointLight);
   scene.add(camera);
 
