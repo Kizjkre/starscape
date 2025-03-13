@@ -92,40 +92,6 @@ $effect.root(() => {
 
   $effect(async () => {
     if (!ResonanceAudio || !ctx) return;
-    // if (!ResonanceAudio || !ctx || ctx.destination.maxChannelCount > 2) return;
-
-    // const scene = new ResonanceAudio(ctx, { ambisonicOrder: 1 });
-    //
-    // if (ctx.destination.maxChannelCount > 2) {
-    //   ctx.destination.channelCountMode = 'max';
-    //   ctx.destination.channelCount = 16;
-    //   scene.ambisonicOutput.channelCount = 16;
-    // }
-    //
-    // const dimensions = {
-    //   width: 1000,
-    //   height: 1000,
-    //   depth: 1000
-    // };
-    //
-    // const material = {
-    //   left: 'transparent',
-    //   right: 'transparent',
-    //   up: 'transparent',
-    //   down: 'transparent',
-    //   front: 'transparent',
-    //   back: 'transparent'
-    // };
-    //
-    // scene.setRoomProperties(dimensions, material);
-    // scene.setListenerPosition(0, 15, 0);
-    //
-    // scene[ctx.destination.maxChannelCount <= 2 ? 'output' : 'ambisonicOutput'].connect(ctx.destination);
-    //
-    // const gain = new GainNode(ctx);
-    // gain.gain.value = 0.1;
-    //
-    // scene.output.connect(gain).connect(ctx.destination);
 
     bgs.map(async bg => {
       const buffer = await (await fetch(bg)).arrayBuffer();
